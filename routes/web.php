@@ -16,3 +16,9 @@ Route::get('/', function () {
 });
 
 Route::resource('/buku', 'BukuController');
+
+Route::get('book', 'BukuController@index');
+Route::post('book','BukuController@create');
+Route::put('/book/{id}','BukuController@update');
+// Route::delete('/book/{id}','BookController@delete');
+Route::delete('/book/delete/{id}','BukuController@delete');
